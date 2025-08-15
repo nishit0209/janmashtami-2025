@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>જન્માષ્ટમી - શ્રી કૃષ્ણ જન્મોત્સવ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Gujarati', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #8b0000, #004d00);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(255, 204, 0, 0.1) 0%, transparent 10%),
+                radial-gradient(circle at 90% 80%, rgba(255, 204, 0, 0.1) 0%, transparent 10%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="2" fill="%23ffffff" opacity="0.1"/></svg>');
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            color: #ffcc00;
+            text-shadow: 0 0 15px rgba(255, 204, 0, 0.8), 0 0 30px rgba(255, 204, 0, 0.6);
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 204, 0, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 204, 0, 0.9), 0 0 40px rgba(255, 204, 0, 0.7), 0 0 60px rgba(255, 204, 0, 0.5);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #ffdb4d;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .krishna-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .krishna-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 8px solid #ffcc00;
+            animation: float 4s ease-in-out infinite;
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .krishna-image:hover {
+            transform: scale(1.03) rotateY(5deg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            }
+            50% {
+                transform: translateY(-20px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+            }
+            100% {
+                transform: translateY(0px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .description {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 35px;
+            border-radius: 25px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 204, 0, 0.5);
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .description h2 {
+            color: #ffcc00;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .description h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffcc00, transparent);
+        }
+
+        .description p {
+            margin-bottom: 25px;
+        }
+
+        .symbols {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .symbol {
+            background: rgba(255, 204, 0, 0.15);
+            border: 2px solid #ffcc00;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .symbol:hover {
+            transform: scale(1.15) rotate(10deg);
+            background: rgba(255, 204, 0, 0.3);
+            box-shadow: 0 0 25px #ffcc00;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.7rem;
+            margin: 50px auto;
+            max-width: 900px;
+            padding: 30px;
+            border-left: 5px solid #ffcc00;
+            border-right: 5px solid #ffcc00;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+       .quote::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 20px;
+        font-size: 8rem;
+        color: rgba(255, 204, 0, 0.2);
+        font-family: serif;
+  }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-top: 2px solid rgba(255, 204, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .flute {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-size: 3.5rem;
+            opacity: 0.8;
+            animation: rotate 15s linear infinite;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+
+        .peacock-feather {
+            position: absolute;
+            bottom: 20%;
+            left: 5%;
+            font-size: 3.5rem;
+            opacity: 0.8;
+            animation: sway 8s ease-in-out infinite;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+        .lotus {
+            position: absolute;
+            top: 25%;
+            left: 8%;
+            font-size: 3rem;
+            opacity: 0.7;
+            animation: float-lotus 6s ease-in-out infinite;
+            color: #FF5252;
+            text-shadow: 0 0 8px rgba(255, 82, 82, 0.5);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(-15deg) translateY(0);
+            }
+            50% {
+                transform: rotate(15deg) translateY(-20px);
+            }
+        }
+
+        @keyframes float-lotus {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-25px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .butter-pot {
+            position: absolute;
+            bottom: 15%;
+            right: 8%;
+            font-size: 3rem;
+            animation: shake 5s ease-in-out infinite;
+            color: #FF9800;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(10deg);
+            }
+            75% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .description h2 {
+                font-size: 2rem;
+            }
+            .description {
+                font-size: 1.1rem;
+                padding: 25px;
+            }
+            .flute, .peacock-feather, .lotus, .butter-pot {
+                display: none;
+            }
+            .symbol {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+            .quote {
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .description h2 {
+                font-size: 1.7rem;
+            }
+            .description {
+                font-size: 1rem;
+                padding: 20px;
+            }
+            .symbol {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+            .quote {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">જન્માષ્ટમી</h1>
+            <p class="subtitle">શ્રી કૃષ્ણ જન્મોત્સવ</p>
+            <p class="subtitle">જનમાષ્ટ્મી ની હાર્દિક સુભકનાઓ</p>
+        </header>
+
+        <div class="content">
+            <div class="krishna-container">
+                <div class="image-wrapper">
+                    <img src="https://thesevencolours.com/cdn/shop/files/Premium_Radha_Krishna_Wallpaper_Self_Adhesive_Mural_Wallpaper_Customized_Wallpaper.png?v=1735203535,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><defs><linearGradient id='sky' x1='0%' y1='0%' x2='0%' y2='100%'><stop offset='0%' stop-color='%231a2a6c'/><stop offset='100%' stop-color='%23004d00'/></linearGradient><radialGradient id='halo' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'><stop offset='0%' stop-color='%23FFD700' stop-opacity='0.8'/><stop offset='100%' stop-color='%23FFD700' stop-opacity='0'/></radialGradient></defs><rect width='400' height='500' fill='url(%23sky)'/><circle cx='200' cy='250' r='120' fill='url(%23halo)'/><circle cx='200' cy='180' r='80' fill='%238B4513'/><circle cx='200' cy='150' r='70' fill='%23FFDBAC'/><path d='M150 250 Q200 300 250 250' stroke='%23000' stroke-width='5' fill='none'/><ellipse cx='180' cy='130' rx='10' ry='15' fill='%23000'/><ellipse cx='220' cy='130' rx='10' ry='15' fill='%23000'/><path d='M200 150 Q210 170 200 170 Q190 170 200 150' fill='%23FF6B6B'/><path d='M170 200 Q200 220 230 200' stroke='%23000' stroke-width='3' fill='none'/><path d='M120 300 L140 350 L160 300' stroke='%23000' stroke-width='8' fill='none'/><path d='M240 300 L260 350 L280 300' stroke='%23000' stroke-width='8' fill='none'/><path d='M150 380 Q200 450 250 380' stroke='%23000' stroke-width='8' fill='none'/><circle cx='200' cy='110' r='10' fill='%23FFD700'/><path d='M120 100 L140 80 L160 100' stroke='%23FFD700' stroke-width='5' fill='none'/></svg>" 
+                    alt="શ્રી કૃષ્ણ" class="krishna-image">
+                </div>
+            </div>
+            
+            <div class="description">
+                <h2>શ્રી કૃષ્ણ - ભગવાન વિષ્ણુનું આઠમું અવતાર</h2>
+                <p>શ્રી કૃષ્ણ ભગવાન વિષ્ણુના આઠમા અવતાર છે અને હિંદુ ધર્મમાં સૌથી પ્રિય અને પૂજનીય દેવતાઓ પૈકીના એક છે. તેઓ મથુરામાં દેવકી અને વસુદેવને ઘેર જન્મ્યા હતા, પરંતુ તેમનું લાલન-પાલન યશોદા અને નંદબાબાએ ગોકુળમાં કર્યું હતું.</p>
+                <p>જન્માષ્ટમી ભાદરવા માસના કૃષ્ણ પક્ષની અષ્ટમી (આઠમી) ના દિવસે મધ્યરાત્રિએ શ્રી કૃષ્ણના જન્મોત્સવની ઉજવણી છે. હિંદુ પુરાણો મુજબ, કંસના ભયાનક શાસન દરમિયાન, જ્યારે કંસે શ્રી કૃષ્ણને મારી નાખવાની ઘણી વાર કોશિશ કરી હતી, ત્યારે તેમનો જન્મ થયો હતો.</p>
+                <p>શ્રી કૃષ્ણ તેમની ભગવદ્ ગીતાના દિવ્ય ઉપદેશો, તેમની મોહક બંસરી વાદન, તેમની શરારતભરી બાળલીલાઓ અને દિવ્ય રક્ષક તરીકેની ભૂમિકા માટે જાણીતા છે. તેમનું જીવન સત્યની અસત્ય પર વિજય, ધર્મની અધર્મ પર વિજય અને ફળની આશા રાખ્યા વિના કર્તવ્ય પાળવાના મહત્વનું પ્રતીક છે.</p>
+                <p>ગુજરાતમાં જન્માષ્ટમી ખૂબ જ ધૂમધામથી ઉજવવામાં આવે છે. દહીં-હાંડી ફોડવાની રમત, ભજન-કીર્તન, રાસ-ગરબા અને મંદિરોમાં ખાસ પૂજા-અર્ચના કરવામાં આવે છે. શ્રી કૃષ્ણની બાળલીલાઓનું નાટ્ય ભજનો સાથે ભાવભીની રીતે રજૂ કરવામાં આવે છે.</p>
+            </div>
+        </div>
+
+        <div class="symbols">
+            <div class="symbol" title="મોરપીંછ"><i class="fas fa-feather-alt"></i></div>
+            <div class="symbol" title="બંસરી"><i class="fas fa-music"></i></div>
+            <div class="symbol" title="ઓમ"><i class="fas fa-om"></i></div>
+            <div class="symbol" title="ગાય"><i class="fas fa-cow"></i></div>
+            <div class="symbol" title="માખણ"><i class="fas fa-cookie-bite"></i></div>
+        </div>
+
+        <div class="quote">
+            "જ્યારે જ્યારે ધર્મનો હ્રાસ થાય છે અને અધર્મનો વિજય થાય છે, ત્યારે ત્યારે હું જન્મ લઉં છું."
+            <br>- ભગવદ્ ગીતા (4.7)
+        </div>
+
+        <div class="flute">
+            <i class="fas fa-music"></i>
+        </div>
+        <div class="peacock-feather">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="lotus">
+            <i class="fas fa-spa"></i>
+        </div>
+        <div class="butter-pot">
+            <i class="fas fa-mortar-pestle"></i>
+        </div>
+    </div>
+
+    <footer>
+        <p>જન્માષ્ટમીની શુભકામનાઓ! શ્રી કૃષ્ણ તમારા જીવનમાં સુખ, શાંતિ અને સમૃદ્ધિ લાવે!</p>
+        <p>© ૨૦૨૫  જન્માષ્ટમી ઉજવણી</p>
+    </footer>
+</body>
+</html>
